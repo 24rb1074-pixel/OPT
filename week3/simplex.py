@@ -19,6 +19,9 @@ def simplex(c, A, b, sense="max", verbose=False):
     A = np.array(A, dtype=float)
     b = np.array(b, dtype=float)
     
+    if np.any(b < -1e-9):
+        raise ValueError("この実装では b >= 0 の標準形のみを対象とします。")
+    
     m, n = A.shape # m: 制約式の数, n: 元の変数の数
     
     # ========================================================
@@ -29,6 +32,9 @@ def simplex(c, A, b, sense="max", verbose=False):
     rows = m + 1
     cols = n + m + 1
     tableau = np.zeros((rows, cols))
+    
+    if sense not in ("max", "min"):
+        raise ValueError('sense は "max" または "min" を指定してください。')
     
     # 1. 目的関数のセット (z行を0行目に配置)
     for j in range(n):
@@ -182,25 +188,47 @@ def simplex(c, A, b, sense="max", verbose=False):
     }
 
 
-# ============================================================
-# テスト実行用コード (演習問題3のデータを使用)
-# ============================================================
 if __name__ == "__main__":
-    c = [48,35,27,52,31,40,23,45]
-    A = [[3,2,1,4,2,3,1,2],
-        [2,3,2,2,1,2,3,4],
-        [1,1,2,2,1,1,1,2],
-        [4,1,0,5,2,3,0,2],
-        [0,2,3,1,2,1,4,3],
-        [2,2,1,3,1,2,1,2]]
-    b = [240,220,150,200,180,160]
-    
-    print("=== シンプレックス法の実行開始 ===")
-    result = simplex(c, A, b, sense="max", verbose=True)
-    
-    print("=== 最終結果 (戻り値 dict の内容) ===")
-    for key, value in result.items():
-        if isinstance(value, float):
-            print(f"{key:15}: {value:.2f}")
-        else:
-            print(f"{key:15}: {value}")
+    problems = [
+        {
+            "name": "課題1",
+            "c": [2, 3],
+            "A": [[1, 1],
+                  [1, 3]],
+            "b": [4, 6]
+        },
+        {
+            "name": "課題2",
+            "c": [5, 4, 3],
+            "A": [[2, 3, 1],
+                  [4, 1, 2],
+                  [3, 4, 2]],
+            "b": [5, 11, 8]
+        },
+        {
+            "name": "課題3",
+            "c": [48, 35, 27, 52, 31, 40, 23, 45],
+            "A": [[3, 2, 1, 4, 2, 3, 1, 2],
+                  [2, 3, 2, 2, 1, 2, 3, 4],
+                  [1, 1, 2, 2, 1, 1, 1, 2],
+                  [4, 1, 0, 5, 2, 3, 0, 2],
+                  [0, 2, 3, 1, 2, 1, 4, 3],
+                  [2, 2, 1, 3, 1, 2, 1, 2]],
+            "b": [240, 220, 150, 200, 180, 160]
+        }
+    ]
+
+    for p in problems:
+        print(f"\n================ {p['name']} ================")
+        result = simplex(p["c"], p["A"], p["b"], sense="max", verbose=True)
+
+        x_str = ", ".join([f"{v:.2f}" for v in result["x"]])
+        y_str = ", ".join([f"{v:.2f}" for v in result["y"]])
+
+        print("\n--- 最終結果 ---")
+        print(f"status          : {result['status']}")
+        print(f"x               : [{x_str}]")
+        print(f"objective       : {result['objective']:.2f}")
+        print(f"y               : [{y_str}]")
+        print(f"num_iterations  : {result['num_iterations']}")
+        print(f"basis           : {result['basis']}")
