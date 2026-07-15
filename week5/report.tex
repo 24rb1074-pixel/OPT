@@ -1,0 +1,219 @@
+\documentclass[11pt,a4paper]{ltjsarticle}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{listings}
+\usepackage{xcolor}
+
+% ソースコードの表示設定
+\lstset{
+    basicstyle=\ttfamily\small,
+    commentstyle=\color{green!50!black},
+    keywordstyle=\color{blue},
+    stringstyle=\color{red},
+    showstringspaces=false,
+    frame=single,
+    numbers=left,
+    stepnumber=1
+}
+
+\title{最適化 第9〜10回 演習課題レポート}
+\author{学籍番号: 24RB1074 \and 氏名: 半田悠人}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{課題1: 最急降下・Newton・BFGSを自作実装}
+対象関数: $f(x_{1},x_{2})=x_{1}^{2}+10x_{2}^{2}$, 初期値: $x_{0}=(3,2)$
+
+\subsection{実行結果表}
+% プログラムの出力結果
+\begin{table}[hbtp]
+    \centering
+    \caption{各手法の実行結果}
+    \begin{tabular}{lcccc}
+        \toprule
+        手法 & 最終解 $x^*$ & 目的関数値 $f(x^*)$ & 反復回数 & 最終勾配ノルム \\
+        \midrule
+        最急降下法 & ($3.41 \times 10^{-7}$, $-3.27 \times 10^{-8}$) & $1.27 \times 10^{-13}$ & 63 & $9.45 \times 10^{-7}$ \\
+        Newton法  & (0, 0) & 0 & 1 & 0 \\
+        BFGS法    & ($1.18 \times 10^{-8}$, $-1.10 \times 10^{-10}$) & $1.39 \times 10^{-16}$ & 6 & $2.37 \times 10^{-8}$ \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\subsection{収束経路の図}
+% TODO: 作成した図のファイル名を指定してください
+\begin{figure}[hbtp]
+    \centering
+    \includegraphics[width=10cm]{plots/kadai1_最急降下法.png}
+    \caption{最急降下法の収束経路}
+    \label{fig:task1_gradient}
+\end{figure}
+
+\begin{figure}[hbtp]
+    \centering
+    \includegraphics[width=10cm]{plots/kadai1_Newton法.png}
+    \caption{Newton法の収束経路}
+    \label{fig:task1_newton}
+\end{figure}
+
+\begin{figure}[hbtp]
+    \centering
+    \includegraphics[width=10cm]{plots/kadai1_BFGS法.png}
+    \caption{BFGS法の収束経路}
+    \label{fig:task1_bfgs}
+\end{figure}
+
+\subsection{考察}
+% TODO: 3手法の違いを「計算量」の観点から説明してください
+ここに課題1の考察を記述します。（例：最急降下法は悪条件のためジグザグした挙動を示し反復回数が多くなったが、1ステップの計算量は少ない。一方、Newton法は…）
+
+\clearpage
+\section{課題2: 初期値によって異なる解に収束することを体験}
+Himmelblau関数: $f(x,y)=(x^{2}+y-11)^{2}+(x+y^{2}-7)^{2}$
+
+\subsection{実行結果表}
+\begin{table}[hbtp]
+    \centering
+    \caption{Himmelblau関数における初期値依存性の結果}
+    \begin{tabular}{cllccc}
+        \toprule
+        初期値 & 手法 & 最終解 $x^*$ & $f(x^*)$ & 反復回数 & 収束先番号 \\
+        \midrule
+        $(-4, 4)$ 
+        & 最急降下法 & (3.58, -1.85)  & $3.35 \times 10^{-15}$ & 40 & 4 \\
+        & Newton法  & (-2.81, 3.13)  & $1.34 \times 10^{-22}$ & 5 & 2 \\
+        & BFGS法    & (3.58, -1.85)  & $8.41 \times 10^{-21}$ & 12 & 4 \\
+        \midrule
+        $(-3, -3)$ 
+        & 最急降下法 & (-3.78, -3.28) & $4.27 \times 10^{-17}$ & 14 & 3 \\
+        & Newton法  & (-3.78, -3.28) & $3.34 \times 10^{-22}$ & 5 & 3 \\
+        & BFGS法    & (-3.78, -3.28) & $4.83 \times 10^{-19}$ & 9 & 3 \\
+        \midrule
+        $(0, 0)$ 
+        & 最急降下法 & (3.00, 2.00)   & $8.19 \times 10^{-16}$ & 25 & 1 \\
+        & Newton法  & (-0.27, -0.92) & 181.62                 & 4 & 鞍点(未収束) \\
+        & BFGS法    & (3.00, 2.00)   & $1.43 \times 10^{-19}$ & 10 & 1 \\
+        \midrule
+        $(3, 3)$ 
+        & 最急降下法 & (3.00, 2.00)   & $4.91 \times 10^{-15}$ & 21 & 1 \\
+        & Newton法  & (3.00, 2.00)   & $1.12 \times 10^{-19}$ & 5 & 1 \\
+        & BFGS法    & (3.00, 2.00)   & $5.54 \times 10^{-18}$ & 8  & 1 \\
+        \midrule
+        $(5, -2)$ 
+        & 最急降下法 & (-3.78, -3.28) & $3.71 \times 10^{-16}$ & 13 & 3 \\
+        & Newton法  & (3.58, -1.85)  & $5.14 \times 10^{-24}$ & 5 & 4 \\
+        & BFGS法    & (-3.78, -3.28) & $3.52 \times 10^{-15}$ & 11 & 3 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\subsection{収束経路の図}
+% TODO: 作成した図（等高線と経路）のファイル名を指定してください
+\begin{figure}[hbtp]
+    \centering
+    \includegraphics[width=12cm]{plots/himmelblau_-4_4.png}
+    \caption{初期値 $(-4, 4)$ からの収束経路}
+    \label{fig:task2}
+\end{figure}
+
+\begin{figure}[hbtp]
+    \centering
+    \includegraphics[width=12cm]{plots/himmelblau_-3_-3.png}
+    \caption{初期値 $(-3, -3)$ からの収束経路}
+    \label{fig:task2}
+\end{figure}
+
+\begin{figure}[hbtp]
+    \centering
+    \includegraphics[width=12cm]{plots/himmelblau_0_0.png}
+    \caption{初期値 $(0, 0)$ からの収束経路}
+    \label{fig:task2}
+\end{figure}
+
+\begin{figure}[hbtp]
+    \centering
+    \includegraphics[width=12cm]{plots/himmelblau_3_3.png}
+    \caption{初期値 $(3, 3)$ からの収束経路}
+    \label{fig:task2}
+\end{figure}
+
+\begin{figure}[hbtp]
+    \centering
+    \includegraphics[width=12cm]{plots/himmelblau_5_-2.png}
+    \caption{初期値 $(5, -2)$ からの収束経路}
+    \label{fig:task2}
+\end{figure}
+
+\subsection{考察}
+% TODO: 凸関数との違い、局所解と大域解の違い、Newton方向の性質、安定化に必要なことなどを記述してください
+ここに課題2の考察を記述します。非凸関数における局所解の複数存在や、Newton法が降下方向を示さず発散・振動したケース、BFGS法の安定性などについて考察します。
+
+\clearpage
+\section{課題3: KKT条件を「有効制約集合」で実装する}
+目的関数: $\min f(x)=(x_{1}-a)^{2}+(x_{2}-b)^{2}$ \\
+制約条件: $g_{1}=x_{1}^{2}+x_{2}^{2}-1 \le 0,\ g_{2}=-x_{1} \le 0,\ g_{3}=-x_{2} \le 0$
+
+\subsection{各中心点における最適解と有効制約}
+4つの異なる中心点 $(a,b)$ に対してActive-set法を実行した結果を以下の表に示す。中心点の位置によって、最終的にどの制約が有効（Active）になるかが変化していることがわかる。
+
+\begin{table}[hbtp]
+    \centering
+    \caption{各中心点に対する最適解と有効制約・乗数の結果}
+    \begin{tabular}{lcccc}
+        \toprule
+        中心点 $(a,b)$ & 最適解 $x^*$ & 目的関数値 $f(x^*)$ & 有効制約 $A^*$ & 乗数 $\mu^*$ \\
+        \midrule
+        $(2, 1)$   & $(0.8944, 0.4472)$ & $1.5279$ & $\{g_1\}$ & $(1.2361, 0, 0)$ \\
+        $(-1, 1)$  & $(0, 1)$           & $1.0000$ & $\{g_2\}$ & $(0, 2, 0)$ \\
+        $(1, -1)$  & $(1, 0)$           & $1.0000$ & $\{g_3\}$ & $(0, 0, 2)$ \\
+        $(-1, -1)$ & $(0, 0)$           & $2.0000$ & $\{g_2, g_3\}$ & $(0, 2, 2)$ \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\subsection{KKT解の判定チェックリスト（抜粋）}
+アルゴリズム内部でKKT条件がどのように検証されているかを示すため、中心点 $(a,b) = (2,1)$ において、いくつかの有効制約を仮定した際の判定チェックリストを抜粋して以下に示す。
+
+\begin{table}[hbtp]
+    \centering
+    \caption{中心点 $(2,1)$ におけるKKT解の判定チェックリスト}
+    \begin{tabular}{ccccccc}
+        \toprule
+        仮定した $A$ & 1.主実行 & 2.有効整合 & 3.無効整合 & 4.双対実行 & 5.相補性 & 総合判定 \\
+        \midrule
+        $\{\phi\}$  & NG & OK & OK & OK & OK & 不適合 \\
+        $\{g_2\}$   & OK & OK & OK & NG & OK & 不適合 \\
+        $\mathbf{\{g_1\}}$ & \textbf{OK} & \textbf{OK} & \textbf{OK} & \textbf{OK} & \textbf{OK} & \textbf{KKT条件クリア} \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\subsection{考察}
+% 以下を参考に、自分の言葉で考察をまとめてください。
+課題3の結果から、有効制約と乗数の意味について考察する。
+第一に、中心点の位置と幾何学的な関係である。中心点 $(2,1)$ は第一象限の円の外側にあるため、円の境界である $g_1$ が有効制約となった。一方、$(-1,1)$ は第二象限にあるため $y$ 軸（$g_2$）が、$(1,-1)$ は第四象限にあるため $x$ 軸（$g_3$）が有効になっている。さらに $(-1,-1)$ は第三象限にあるため、原点 $(0,0)$ に引き寄せられ、$x$軸と$y$軸の両方（$g_2, g_3$）が有効制約となった。このように、点 $(a,b)$ を第一象限の単位円内に射影（Projection）するという問題の幾何学的な性質が、Active-set の変化として正しく捉えられている [cite: 95-103]。
+
+第二に、乗数 $\mu$ の意味についてである。KKT判定において、有効制約なし $\{\phi\}$ を仮定した場合は制約の範囲外へ飛び出してしまうため「主実行可能性」でNGとなり、誤った制約 $\{g_2\}$ を仮定した場合は、降下方向と逆向きの力が必要になるため乗数が負となり「双対実行可能性」でNGとなった。乗数 $\mu_i > 0$ は、最適解が制約領域の外へ出ようとするのを押し留める「壁からの反発力（ペナルティ）」として機能していることが確認できた。
+\clearpage
+\appendix
+\section{実装した関数一式}
+% TODO: 以下の環境内にPython等のソースコードを貼り付けるか、\lstinputlisting{filename.py}で読み込んでください
+
+\begin{lstlisting}[language=Python, caption=最適化手法の実装コード]
+# ここにプログラムのソースコードを貼り付けます
+import numpy as np
+
+def steepest_descent():
+    pass
+
+def newton_method():
+    pass
+
+def bfgs_method():
+    pass
+\end{lstlisting}
+
+\end{document}
