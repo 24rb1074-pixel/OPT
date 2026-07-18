@@ -1,4 +1,25 @@
 {
     "python-envs.defaultEnvManager": "ms-python.python:conda",
-    "python-envs.defaultPackageManager": "ms-python.python:conda"
+    "python-envs.defaultPackageManager": "ms-python.python:conda",
+    "latex-workshop.latex.tools": [
+        {
+            "name": "latexmk (upLaTeX)",
+            "command": "latexmk",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOC%"
+            ]
+        }
+    ],
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "latexmk (upLaTeX)",
+            "tools": [
+                "latexmk (upLaTeX)"
+            ]
+        }
+    ],
+    "latex-workshop.latex.recipe.default": "first"
 }
