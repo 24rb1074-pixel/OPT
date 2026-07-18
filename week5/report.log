@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.24.0 (TeX Live 2026)  (format=lualatex 2026.7.10)  18 JUL 2026 16:17
+This is LuaHBTeX, Version 1.24.0 (TeX Live 2026)  (format=lualatex 2026.7.10)  18 JUL 2026 21:05
  restricted system commands enabled.
 **report.tex
 (./report.tex
@@ -905,55 +905,51 @@ Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
-) (./report.aux
-
-LaTeX Warning: Label `fig:task2' multiply defined.
-
-
-LaTeX Warning: Label `fig:task2' multiply defined.
-
-
-LaTeX Warning: Label `fig:task2' multiply defined.
-
-
-LaTeX Warning: Label `fig:task2' multiply defined.
-
 )
+(c:/texlive/2026/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count321
+\float@exts=\toks36
+\float@box=\box75
+\@float@everytoks=\toks37
+\@floatcapt=\box76
+) (./report.aux)
 \openout1 = report.aux
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for JY3/mc/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for JT3/mc/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
- (c:/texlive/2026/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for JY3/mc/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for JT3/mc/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+
+(c:/texlive/2026/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count321
+\scratchcounter=\count322
 \scratchdimen=\dimen260
-\scratchbox=\box75
-\nofMPsegments=\count322
-\nofMParguments=\count323
-\everyMPshowfont=\toks36
-\MPscratchCnt=\count324
+\scratchbox=\box77
+\nofMPsegments=\count323
+\nofMParguments=\count324
+\everyMPshowfont=\toks38
+\MPscratchCnt=\count325
 \MPscratchDim=\dimen261
-\MPnumerator=\count325
-\makeMPintoPDFobject=\count326
-\everyMPtoPDFconversion=\toks37
+\MPnumerator=\count326
+\makeMPintoPDFobject=\count327
+\everyMPtoPDFconversion=\toks39
 ) (c:/texlive/2026/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -963,128 +959,135 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\c@lstlisting=\count327
+\c@lstlisting=\count328
 (load cache: extra_lmroman17-regular.luc)
 LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
-(Font)              scaled to size 15.97903pt on input line 25.
+(Font)              scaled to size 15.97903pt on input line 26.
 LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
-(Font)              scaled to size 15.97903pt on input line 25.
+(Font)              scaled to size 15.97903pt on input line 26.
 (load cache: extra_lmroman12-regular.luc)
 LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
-(Font)              scaled to size 11.09656pt on input line 25.
+(Font)              scaled to size 11.09656pt on input line 26.
 LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
-(Font)              scaled to size 11.09656pt on input line 25.
+(Font)              scaled to size 11.09656pt on input line 26.
 LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
-(Font)              scaled to size 13.31584pt on input line 27.
+(Font)              scaled to size 13.31584pt on input line 28.
 LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
-(Font)              scaled to size 13.31584pt on input line 27.
+(Font)              scaled to size 13.31584pt on input line 28.
 LaTeX Font Info:    Font shape `JT3/gt/m/n' will be
-(Font)              scaled to size 13.31584pt on input line 27.
+(Font)              scaled to size 13.31584pt on input line 28.
 LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
-(Font)              scaled to size 13.31584pt on input line 27.
+(Font)              scaled to size 13.31584pt on input line 28.
 (load cache: extra_haranoajigothic-medium.luc)(load cache: extra_lmsans12-regula
 r.luc)
-LaTeX Font Info:    Calculating math sizes for size <10.95001> on input line 28
+LaTeX Font Info:    Calculating math sizes for size <10.95001> on input line 29
 .
 LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
-(Font)              scaled to size 6.47295pt on input line 28.
+(Font)              scaled to size 6.47295pt on input line 29.
 LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
-(Font)              scaled to size 4.62357pt on input line 28.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 28.
+(Font)              scaled to size 4.62357pt on input line 29.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 29.
 
 
 (c:/texlive/2026/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 28.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 29.
 
 
 (c:/texlive/2026/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `JT3/gt/m/n' will be
-(Font)              scaled to size 11.09656pt on input line 30.
+(Font)              scaled to size 11.09656pt on input line 31.
 LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
-(Font)              scaled to size 11.09656pt on input line 30.
+(Font)              scaled to size 11.09656pt on input line 31.
 LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
-(Font)              scaled to size 8.32242pt on input line 34.
+(Font)              scaled to size 8.32242pt on input line 35.
 LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
-(Font)              scaled to size 8.32242pt on input line 34.
+(Font)              scaled to size 8.32242pt on input line 35.
 
-Overfull \hbox (1.86646pt too wide) in paragraph at lines 35--44
+Overfull \hbox (1.86646pt too wide) in paragraph at lines 36--45
  [][][][] 
  []
 
 <plots/kadai1_最急降下法.png, id=1, 425.9112pt x 353.6412pt>
 File: plots/kadai1_最急降下法.png Graphic file (type png)
 <use plots/kadai1_最急降下法.png>
-Package luatex.def Info: plots/kadai1_最急降下法.png  used on input line 4
-9.
-(luatex.def)             Requested size: 284.52756pt x 236.24765pt.
-<plots/kadai1_Newton法.png, id=2, 425.9112pt x 353.6412pt>
-File: plots/kadai1_Newton法.png Graphic file (type png)
-<use plots/kadai1_Newton法.png>
-Package luatex.def Info: plots/kadai1_Newton法.png  used on input line 56.
-(luatex.def)             Requested size: 284.52756pt x 236.24765pt.
-<plots/kadai1_BFGS法.png, id=3, 425.9112pt x 353.6412pt>
-File: plots/kadai1_BFGS法.png Graphic file (type png)
-<use plots/kadai1_BFGS法.png>
-Package luatex.def Info: plots/kadai1_BFGS法.png  used on input line 63.
-(luatex.def)             Requested size: 284.52756pt x 236.24765pt.
+Package luatex.def Info: plots/kadai1_最急降下法.png  used on input line 5
+0.
+(luatex.def)             Requested size: 241.84842pt x 200.81131pt.
 [1
 
-{c:/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2<./plots/kadai
-1_最急降下法.png><./plots/kadai1_Newton法.png>] [3<./plots/kadai1_BFGS
-法.png>]
-<plots/himmelblau_-4_4.png, id=31, 498.1812pt x 424.9476pt>
+{c:/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+<plots/kadai1_Newton法.png, id=19, 425.9112pt x 353.6412pt>
+File: plots/kadai1_Newton法.png Graphic file (type png)
+<use plots/kadai1_Newton法.png>
+Package luatex.def Info: plots/kadai1_Newton法.png  used on input line 57.
+(luatex.def)             Requested size: 241.84842pt x 200.81131pt.
+<plots/kadai1_BFGS法.png, id=20, 425.9112pt x 353.6412pt>
+File: plots/kadai1_BFGS法.png Graphic file (type png)
+<use plots/kadai1_BFGS法.png>
+Package luatex.def Info: plots/kadai1_BFGS法.png  used on input line 64.
+(luatex.def)             Requested size: 241.84842pt x 200.81131pt.
+ [2<./plots/kadai1_最急降下法.png><./plots/kadai1_Newton法.png>] [3<./plot
+s/kadai1_BFGS法.png>]
+Overfull \hbox (63.74115pt too wide) in paragraph at lines 100--130
+ [][][][] 
+ []
+
+[4
+
+]
+<plots/himmelblau_-4_4.png, id=34, 498.1812pt x 424.9476pt>
 File: plots/himmelblau_-4_4.png Graphic file (type png)
 <use plots/himmelblau_-4_4.png>
-Package luatex.def Info: plots/himmelblau_-4_4.png  used on input line 135.
-(luatex.def)             Requested size: 341.43306pt x 291.24945pt.
-LaTeX Font Info:    Calculating math sizes for size <9.85501> on input line 136
+Package luatex.def Info: plots/himmelblau_-4_4.png  used on input line 136.
+(luatex.def)             Requested size: 241.84842pt x 206.29385pt.
+LaTeX Font Info:    Calculating math sizes for size <9.85501> on input line 137
 .
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <4.5> not available
-(Font)              size <5> substituted on input line 136.
+(Font)              size <5> substituted on input line 137.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <4.5> not available
-(Font)              size <5> substituted on input line 136.
+(Font)              size <5> substituted on input line 137.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <4.5> not available
-(Font)              size <5> substituted on input line 136.
+(Font)              size <5> substituted on input line 137.
 
 LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
-(Font)              scaled to size 5.82565pt on input line 136.
+(Font)              scaled to size 5.82565pt on input line 137.
 LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
-(Font)              scaled to size 4.16121pt on input line 136.
-<plots/himmelblau_-3_-3.png, id=32, 498.1812pt x 424.9476pt>
+(Font)              scaled to size 4.16121pt on input line 137.
+<plots/himmelblau_-3_-3.png, id=35, 498.1812pt x 424.9476pt>
 File: plots/himmelblau_-3_-3.png Graphic file (type png)
 <use plots/himmelblau_-3_-3.png>
-Package luatex.def Info: plots/himmelblau_-3_-3.png  used on input line 142.
-(luatex.def)             Requested size: 341.43306pt x 291.24945pt.
-<plots/himmelblau_0_0.png, id=33, 498.1812pt x 424.9476pt>
+Package luatex.def Info: plots/himmelblau_-3_-3.png  used on input line 143.
+(luatex.def)             Requested size: 241.84842pt x 206.29385pt.
+<plots/himmelblau_0_0.png, id=36, 498.1812pt x 424.9476pt>
 File: plots/himmelblau_0_0.png Graphic file (type png)
 <use plots/himmelblau_0_0.png>
-Package luatex.def Info: plots/himmelblau_0_0.png  used on input line 149.
-(luatex.def)             Requested size: 341.43306pt x 291.24945pt.
-<plots/himmelblau_3_3.png, id=34, 498.1812pt x 424.9476pt>
+Package luatex.def Info: plots/himmelblau_0_0.png  used on input line 150.
+(luatex.def)             Requested size: 241.84842pt x 206.29385pt.
+[5
+
+<./plots/himmelblau_-4_4.png><./plots/himmelblau_-3_-3.png>]
+<plots/himmelblau_3_3.png, id=45, 498.1812pt x 424.9476pt>
 File: plots/himmelblau_3_3.png Graphic file (type png)
 <use plots/himmelblau_3_3.png>
-Package luatex.def Info: plots/himmelblau_3_3.png  used on input line 156.
-(luatex.def)             Requested size: 341.43306pt x 291.24945pt.
-<plots/himmelblau_5_-2.png, id=35, 498.1812pt x 424.9476pt>
+Package luatex.def Info: plots/himmelblau_3_3.png  used on input line 157.
+(luatex.def)             Requested size: 241.84842pt x 206.29385pt.
+<plots/himmelblau_5_-2.png, id=46, 498.1812pt x 424.9476pt>
 File: plots/himmelblau_5_-2.png Graphic file (type png)
 <use plots/himmelblau_5_-2.png>
-Package luatex.def Info: plots/himmelblau_5_-2.png  used on input line 163.
-(luatex.def)             Requested size: 341.43306pt x 291.24945pt.
-[4
-
-] [5<./plots/himmelblau_-4_4.png>] [6<./plots/himmelblau_-3_-3.png>] [7<./plots/
-himmelblau_0_0.png>] [8<./plots/himmelblau_3_3.png>] [9<./plots/himmelblau_5_-2.
-png>]
+Package luatex.def Info: plots/himmelblau_5_-2.png  used on input line 164.
+(luatex.def)             Requested size: 241.84842pt x 206.29385pt.
+ [6<./plots/himmelblau_0_0.png><./plots/himmelblau_3_3.png>] [7<./plots/himmelbl
+au_5_-2.png>]
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4.5> not available
 (Font)              size <5> substituted on input line 226.
@@ -1109,18 +1112,16 @@ Overfull \hbox (19.21593pt too wide) in paragraph at lines 227--236
  [][][][] 
  []
 
-[10
-
-] [11] (c:/texlive/2026/texmf-dist/tex/latex/listings/lstlang1.sty
+[8] (c:/texlive/2026/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2025/11/14 1.11b listings language file
 )(load cache: extra_lmmono10-regular.luc)
 LaTeX Font Info:    Font shape `JT3/gt/m/n' will be
-(Font)              scaled to size 9.24713pt on input line 260.
+(Font)              scaled to size 9.24713pt on input line 265.
 (load cache: extra_lmmono8-regular.luc)
 LaTeX Font Info:    Font shape `JT3/gt/m/n' will be
-(Font)              scaled to size 6.47299pt on input line 260.
+(Font)              scaled to size 6.47299pt on input line 265.
 LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
-(Font)              scaled to size 6.47299pt on input line 260.
+(Font)              scaled to size 6.47299pt on input line 265.
 Removing  `ltj.process_input_buffer' from `process_input_buffer'.
 Inserting `ltj.listings_unicode' in `process_input_buffer'.
 Inserting `ltj.process_input_buffer' in `process_input_buffer'.
@@ -1132,10 +1133,8 @@ LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
 (load cache: extra_lmroman5-regular.luc)
 LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
 (Font)              scaled to size 4.62357pt on input line 1.
- [12
-
-] [13] [14])
-Removing  `ltj.listings_unicode' from `process_input_buffer'. [15] (./report.au
+ [9] [10] [11])
+Removing  `ltj.listings_unicode' from `process_input_buffer'. [12] (./report.au
 x)
  ***********
 LaTeX2e <2026-06-01>
@@ -1146,20 +1145,17 @@ L3 programming layer <2026-06-18>
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.5pt have occurred.
 
-
-LaTeX Warning: There were multiply-defined labels.
-
 )
 
 Here is how much of LuaTeX's memory you used:
- 7899 strings out of 475704
- 1822936,953878 words of node,token memory allocated
+ 7975 strings out of 475704
+ 1822846,953878 words of node,token memory allocated
  1051 words of node memory still in use:
    10 hlist, 2 vlist, 5 rule, 2 glue, 4 kern, 1 glyph, 203 attribute, 54 glue_sp
 ec, 30 attribute_list, 1 write, 13 user_defined nodes
-   avail lists: 1:17,2:232602,3:598,4:39624,5:29380,6:146,7:23071,8:28,9:56529,1
-0:45,11:1805
- 30487 multiletter control sequences out of 65536+600000
+   avail lists: 1:21,2:234194,3:504,4:40804,5:30648,6:146,7:24300,8:25,9:58697,1
+0:45,11:1889
+ 30558 multiletter control sequences out of 65536+600000
  89 fonts using 73331583 bytes
  119i,12n,112p,2076b,1163s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2026/texmf-dist/fonts/opentype/public/lm/lmmono8-regular.otf><c:/tex
@@ -1182,10 +1178,10 @@ onts/type1/public/amsfonts/cm/cmr9.pfb><c:/texlive/2026/texmf-dist/fonts/type1/p
 ublic/amsfonts/cm/cmss8.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfo
 nts/cm/cmsy10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cms
 y7.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb>
-Output written on report.pdf (15 pages, 5327518 bytes).
+Output written on report.pdf (12 pages, 5329184 bytes).
 
-PDF statistics: 199 PDF objects out of 1000 (max. 8388607)
- 110 compressed objects within 2 object streams
+PDF statistics: 190 PDF objects out of 1000 (max. 8388607)
+ 104 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 1048576)
  1 words of extra memory for PDF output out of 10000 (max. 100000000)
 

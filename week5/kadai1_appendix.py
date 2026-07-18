@@ -93,7 +93,7 @@ def hb_hessian(x):
 
 
 def hb_line_search(x, d, grad, alpha=1.0, beta=0.5, c=1e-4):
-    # 最急降下法とBFGS法で使用するArmijo直線探索
+    # 3手法で使用するArmijo直線探索
     while hb(x + alpha * d) > hb(x) + c * alpha * np.dot(grad, d):
         alpha *= beta
     return alpha
@@ -121,7 +121,8 @@ def hb_newton(x_0, max_iter=100, tol=1e-6):
         if np.linalg.norm(grad) < tol:
             return x, hb(x), k, np.array(path)
         d = np.linalg.solve(hb_hessian(x), -grad)
-        x = x + d
+        alpha = hb_line_search(x, d, grad)
+        x = x + alpha * d
         path.append(x.copy())
     return x, hb(x), max_iter, np.array(path)
 
